@@ -34,9 +34,26 @@ function cekSoal5() {
 }
 
 function bukaPesan() {
-    document.getElementById('kotak-pesan').classList.remove('hidden');
-    document.getElementById('pesan-utama').innerHTML = "Happy Valentine's Day! ❤️";
-    document.getElementById('tombol-buka').style.display = 'none';
+    // Mengambil elemen pembungkus pesan dan video
+    const kotak = document.getElementById('kotak-pesan');
+    const judul = document.getElementById('pesan-utama');
+    const tombol = document.getElementById('tombol-buka');
+    
+    // Logika: Hapus class 'hidden' dan tambahkan 'active'
+    if (kotak) {
+        kotak.classList.remove('hidden');
+        kotak.classList.add('active');
+    }
+    
+    // Mengubah judul slide secara dinamis
+    if (judul) {
+        judul.innerHTML = "Happy Valentine's Day, Ara! ❤️";
+    }
+    
+    // Menghilangkan tombol setelah diklik agar rapi
+    if (tombol) {
+        tombol.style.display = 'none';
+    }
 }
 
 function createHeart() {
