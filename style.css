@@ -1,20 +1,20 @@
-/* Reset dasar agar tampilan konsisten */
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #fff0f3; /* Pink muda */
+    background-color: #fff0f3; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Gunakan min-height agar aman di HP */
+    min-height: 100vh; 
     margin: 0;
-    padding: 20px; /* Tambah padding biar gak nempel di layar HP kecil */
+    padding: 20px; 
 }
 
-/* --- Style untuk Container Utama (Slide) --- */
+
 .container {
     text-align: center;
     background: white;
@@ -22,29 +22,28 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     
-    /* KUNCI RESPONSIF HP DISINI */
-    width: 90%;         /* Di HP dia akan mengambil 90% lebar layar */
-    max-width: 450px;   /* Di Laptop dia mentok di 450px, gak melebar banget */
-    /* ------------------------- */
+  
+    width: 90%;         
+    max-width: 450px;  
     
-    /* Animasi halus saat muncul */
     transition: all 0.5s ease-in-out;
 }
 
-/* --- Style Gambar di dalam slide --- */
 .slide-img {
-    width: 100%; /* Gambar menyesuaikan lebar container */
-    max-height: 250px; /* Batasi tinggi biar gak kegedean */
-    object-fit: cover; /* Biar gambar gak gepeng */
+    width: 100%;       
+    height: auto;      
+    max-height: 400px; 
+    object-fit: block; 
     border-radius: 15px;
-    margin: 15px 0;
+    display: block;
+    margin: 15px auto;
 }
 
 .foto-kita {
-     box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3); /* Sedikit bayangan pink di foto kalian */
+     box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3); 
 }
 
-/* --- Style Teks Pesan Akhir --- */
+
 .pesan-akhir {
     font-size: 18px;
     font-weight: bold;
@@ -52,29 +51,27 @@ body {
     font-style: italic;
 }
 
-/* --- Mekanisme Hide/Show --- */
+
 .hidden {
-    display: none; /* Kelas untuk menyembunyikan elemen */
+    display: none; 
 }
-
 .active {
-    display: block; /* Kelas untuk menampilkan elemen */
-    animation: fadeIn 0.8s; /* Efek muncul perlahan */
+    display: block; 
+    animation: fadeIn 0.8s; 
 }
 
-/* Efek animasi muncul */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Style Tombol --- */
 button {
     background-color: #ff4d6d;
     color: white;
     border: none;
     padding: 12px 25px;
-    border-radius: 50px; /* Tombol lebih bulat */
+    border-radius: 50px; 
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -86,4 +83,40 @@ button:hover {
     background-color: #c9184a;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+video {
+    max-height: 300px; 
+    background-color: black; 
+    outline: none;
+}
+
+.bg-heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none; 
+}
+
+.heart-particle {
+    position: absolute;
+    color: rgba(255, 77, 109, 0.4); 
+    font-size: 20px;
+    user-select: none;
+    animation: moveUp linear infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
 }

@@ -35,3 +35,32 @@ function bukaPesan() {
     // Hilangkan tombolnya
     tombol.style.display = 'none';
 }
+
+function createHeart() {
+    const container = document.getElementById('heart-bg');
+    const heart = document.createElement('div');
+    
+    heart.classList.add('heart-particle');
+    heart.innerHTML = '❤️'; // Kamu bisa ganti dengan ikon lain
+    
+    // Posisi horizontal acak (0-100% lebar layar)
+    heart.style.left = Math.random() * 100 + 'vw';
+    
+    // Durasi animasi acak (biar tidak barengan jalannya)
+    const duration = Math.random() * 3 + 2; // Antara 2 sampai 5 detik
+    heart.style.animationDuration = duration + 's';
+    
+    // Ukuran acak
+    const size = Math.random() * 15 + 10; // Antara 10px sampai 25px
+    heart.style.fontSize = size + 'px';
+
+    container.appendChild(heart);
+
+    // Hapus elemen hati setelah animasinya selesai (biar gak menumpuk di memori)
+    setTimeout(() => {
+        heart.remove();
+    }, duration * 1000);
+}
+
+// Jalankan fungsi createHeart setiap 300 milidetik
+setInterval(createHeart, 300);

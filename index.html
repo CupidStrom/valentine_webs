@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="bg-heart-container" id="heart-bg"></div>
     <div class="container slide active" id="slide-1">
         <h1>Hai Sayang! 👋</h1>
         <img src="gambar-intro.jpg" alt="Intro Image" class="slide-img">
@@ -22,16 +22,19 @@
     </div>
 
     <div class="container slide hidden" id="slide-3">
-        <h1 id="pesan-utama">Untuk Ara ❤️ </h1>
-        <p>Sampai juga di bagian akhir...</p>
+    <h1 id="pesan-utama">Untuk Araaaaaa ❤️</h1>
+    
+    <div id="kotak-pesan" class="hidden">
+        <p class="pesan-akhir">"Happy Valentine's Day, Sayang! ..."</p>
         
-        <div id="kotak-pesan" class="hidden">
-            <p class="pesan-akhir">"Happy Valentine's Day, Sayang! Meskipun jarak misahin kita sekarang, tapi percayalah, doaku dan sayangku nyampe terus ke kamu. Sabar ya, tunggu aku pulang. Love you!"</p>
-            <img src="foto-kalian.jpg" alt="Foto Kenangan" width="150" style="border-radius: 10px; margin-top: 10px;">
-        </div>
-
-        <button id="tombol-buka" onclick="bukaPesan()">Klik di sini, Ra</button>
+        <video width="100%" controls style="border-radius: 15px; margin-top: 10px;">
+            <source src="video-buat-ara.mp4" type="video/mp4">
+            Browser kamu tidak mendukung tag video.
+        </video>
     </div>
+
+    <button id="tombol-buka" onclick="bukaPesan()">Klik di sini, Ra</button>
+</div>
 
     <script src="script.js"></script>
 </body>
