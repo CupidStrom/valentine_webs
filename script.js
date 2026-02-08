@@ -2,7 +2,7 @@ function pindahSlide(curr, next) {
     document.getElementById('slide-' + curr).classList.replace('active', 'hidden');
     document.getElementById('slide-' + next).classList.replace('hidden', 'active');
     if (curr === 1) document.getElementById('bg-music').play();
-    if (next === 9) {
+    if (curr === 9) {
         musik.volume = 0.2; 
     } else {
         musik.volume = 1.0;
