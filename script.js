@@ -1,8 +1,9 @@
+const musik = document.getElementById('bg-music');
 function pindahSlide(curr, next) {
     document.getElementById('slide-' + curr).classList.replace('active', 'hidden');
     document.getElementById('slide-' + next).classList.replace('hidden', 'active');
     if (curr === 1) document.getElementById('bg-music').play();
-    if (curr === 9) {
+    if (next === 9) {
         musik.volume = 0.2; 
     } else {
         musik.volume = 1.0;
