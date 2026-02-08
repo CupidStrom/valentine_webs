@@ -6,7 +6,7 @@ function pindahSlide(curr, next) {
 
 function cekSoal1() {
     const val = document.getElementById('ans-1').value.toLowerCase().trim();
-    if (val === "ara") pindahSlide(2, 3); // Ganti "ara" sesuai nickname aslinya
+    if (val === "ara") pindahSlide(2, 3);
     else document.getElementById('err-1').classList.remove('hidden');
 }
 
@@ -18,7 +18,7 @@ function cekSoal2() {
 
 function cekSoal3() {
     const val = document.getElementById('ans-3').value.toLowerCase().trim();
-    if (val === "minecraft") pindahSlide(4, 5); // Game favorit Akbar
+    if (val === "minecraft") pindahSlide(4, 5);
     else document.getElementById('err-3').classList.remove('hidden');
 }
 
@@ -33,8 +33,15 @@ function cekSoal5() {
     if (val === "SAYANG") pindahSlide(6, 7);
 }
 
+function bukaPesan() {
+    document.getElementById('kotak-pesan').classList.remove('hidden');
+    document.getElementById('pesan-utama').innerHTML = "Happy Valentine's Day! ❤️";
+    document.getElementById('tombol-buka').style.display = 'none';
+}
+
 function createHeart() {
     const container = document.getElementById('heart-bg');
+    if (!container) return;
     const heart = document.createElement('div');
     heart.classList.add('heart-particle');
     heart.innerHTML = '❤️';
@@ -44,4 +51,5 @@ function createHeart() {
     container.appendChild(heart);
     setTimeout(() => { heart.remove(); }, duration * 1000);
 }
+
 setInterval(createHeart, 300);

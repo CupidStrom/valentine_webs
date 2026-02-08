@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine Quest for Ara ❤️</title>
+    <title>Special buat Sayangkuhh Araaa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,15 +12,15 @@
     <div class="container slide active" id="slide-1">
         <h1>Hai Sayang! 👋</h1>
         <img src="gambar-intro.jpg" alt="Intro" class="slide-img">
-        <p>Aku punya tantangan kecil buat kamu sebelum sampai ke hadiahnya...</p>
+        <p>Ada sesuatu yang spesial nih, tapi jawab tantanganku dulu ya...</p>
         <button onclick="pindahSlide(1, 2)">Mulai Quest!</button>
     </div>
 
     <div class="container slide hidden" id="slide-2">
         <h2>Quest #1</h2>
-        <p>Siapa nama panggilan kesayangan kamu?</p>
+        <p>Siapa nama panggilan kamu yang paling sering aku sebut?</p>
         <input type="text" id="ans-1" placeholder="Ketik di sini..." class="input-quest">
-        <p id="err-1" class="error-msg hidden">Masa nama sendiri lupa? Hehe</p>
+        <p id="err-1" class="error-msg hidden">Masa salah sih? Coba lagi!</p>
         <button onclick="cekSoal1()">Cek Jawaban</button>
     </div>
 
@@ -58,25 +58,36 @@
 
     <div class="container slide hidden" id="slide-6">
         <h2>Quest Terakhir!</h2>
-        <p>Ketik "SAYANG" kalau kamu mau liat suratnya!</p>
+        <p>Ketik "SAYANG" kalau kamu mau lanjut!</p>
         <input type="text" id="ans-5" placeholder="..." class="input-quest">
-        <button onclick="cekSoal5()">Buka Surat</button>
+        <button onclick="cekSoal5()">Lanjut</button>
     </div>
 
     <div class="container slide hidden" id="slide-7">
+        <h2>Ini Siapa Si lucuu banget ❤️</h2>
+        <img src="gambar-kita.jpg" alt="Foto Kita" class="slide-img foto-kita">
+        <p>Walaupun LDR, setiap momen sama kamu itu berharga banget.</p>
+        <button onclick="pindahSlide(7, 8)">Lanjut ke Pesan</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-8">
         <h2>Pesan Untukmu Sayangkuhh ❤️</h2>
         <div class="kotak-surat">
             <p>Haiiii sayanggggg, ga kerasa ya udh valentine mwehehehhe, ga berasa jga udh setengah tahunnn aku kenal kamuuu sekarang deymnn senenng banget akuuu. Happy valentine! First time aku dapet valentine dengan seseorang disamping ku dan ku rayakan mwhehehehe. Loveeeee uuu sayankkk!</p>
         </div>
-        <button onclick="pindahSlide(7, 8)">Lihat Video</button>
+        <button onclick="pindahSlide(8, 9)">Lihat Video</button>
     </div>
 
-    <div class="container slide hidden" id="slide-8">
-        <h1>Happy Valentine's Day! ❤️</h1>
-        <video width="100%" controls style="border-radius: 15px; margin-top: 10px;">
-            <source src="video-buat-ara.mp4" type="video/mp4">
-        </video>
-        <p class="pesan-akhir">I Love You, Ara.</p>
+    <div class="container slide hidden" id="slide-9">
+        <h1 id="pesan-utama">Untuk Araaaaaa ❤️</h1>
+        <div id="kotak-pesan" class="hidden">
+            <p class="pesan-akhir">"Happy Valentine's Day, Sayang!"</p>
+            <video width="100%" controls style="border-radius: 15px; margin-top: 10px;">
+                <source src="video-buat-ara.mp4" type="video/mp4">
+                Browser kamu tidak mendukung tag video.
+            </video>
+        </div>
+        <button id="tombol-buka" onclick="bukaPesan()">Klik di sini, Seng</button>
     </div>
 
     <audio id="bg-music" src="lagu-romantis.mp3" loop></audio>
