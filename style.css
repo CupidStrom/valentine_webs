@@ -1,37 +1,89 @@
+/* Reset dasar agar tampilan konsisten */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #fff0f3; /* Warna pink muda */
+    background-color: #fff0f3; /* Pink muda */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Gunakan min-height agar aman di HP */
     margin: 0;
+    padding: 20px; /* Tambah padding biar gak nempel di layar HP kecil */
 }
 
+/* --- Style untuk Container Utama (Slide) --- */
 .container {
     text-align: center;
     background: white;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+    /* KUNCI RESPONSIF HP DISINI */
+    width: 90%;         /* Di HP dia akan mengambil 90% lebar layar */
+    max-width: 450px;   /* Di Laptop dia mentok di 450px, gak melebar banget */
+    /* ------------------------- */
+    
+    /* Animasi halus saat muncul */
+    transition: all 0.5s ease-in-out;
 }
 
+/* --- Style Gambar di dalam slide --- */
+.slide-img {
+    width: 100%; /* Gambar menyesuaikan lebar container */
+    max-height: 250px; /* Batasi tinggi biar gak kegedean */
+    object-fit: cover; /* Biar gambar gak gepeng */
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.foto-kita {
+     box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3); /* Sedikit bayangan pink di foto kalian */
+}
+
+/* --- Style Teks Pesan Akhir --- */
+.pesan-akhir {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c9184a;
+    font-style: italic;
+}
+
+/* --- Mekanisme Hide/Show --- */
 .hidden {
-    display: none; /* Menyembunyikan pesan sebelum diklik */
+    display: none; /* Kelas untuk menyembunyikan elemen */
 }
 
+.active {
+    display: block; /* Kelas untuk menampilkan elemen */
+    animation: fadeIn 0.8s; /* Efek muncul perlahan */
+}
+
+/* Efek animasi muncul */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Style Tombol --- */
 button {
     background-color: #ff4d6d;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 12px 25px;
+    border-radius: 50px; /* Tombol lebih bulat */
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #c9184a;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
 }

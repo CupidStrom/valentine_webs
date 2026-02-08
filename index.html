@@ -2,20 +2,35 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Untuk Ara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Special buat Sayangkuhh Araaa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="pesan-utama">Halo Ara! ❤️</h1>
-        <p>Ada pesan kecil buat kamu di hari Valentine ini.</p>
+
+    <div class="container slide active" id="slide-1">
+        <h1>Hai Sayang! 👋</h1>
+        <img src="gambar-intro.jpg" alt="Intro Image" class="slide-img">
+        <p>Ada sesuatu yang spesial nih...</p>
+        <button onclick="pindahSlide(1, 2)">Lihat Yuk</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-2">
+        <h2>Ini Siapa Si lUCU banget ❤️</h2>
+        <img src="gambar-kita.jpg" alt="Foto Kita" class="slide-img foto-kita">
+        <p>Walaupun LDR, setiap momen sama kamu itu berharga banget.</p>
+        <button onclick="pindahSlide(2, 3)">Lanjut ke Pesan</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-3">
+        <h1 id="pesan-utama">Untuk Ara ❤️ </h1>
+        <p>Sampai juga di bagian akhir...</p>
         
         <div id="kotak-pesan" class="hidden">
-            <p>"Meskipun kita LDR, jarak cuma angka. Kamu tetap yang terdekat di hati."</p>
-            <img src="foto-kalian.jpg" alt="Foto Kenangan" width="200">
+            <p class="pesan-akhir">"Happy Valentine's Day, Sayang! Meskipun jarak misahin kita sekarang, tapi percayalah, doaku dan sayangku nyampe terus ke kamu. Sabar ya, tunggu aku pulang. Love you!"</p>
+            <img src="foto-kalian.jpg" alt="Foto Kenangan" width="150" style="border-radius: 10px; margin-top: 10px;">
         </div>
 
-        <button onclick="bukaPesan()">Klik di sini, Ra</button>
+        <button id="tombol-buka" onclick="bukaPesan()">Klik di sini, Ra</button>
     </div>
 
     <script src="script.js"></script>
