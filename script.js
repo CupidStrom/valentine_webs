@@ -2,6 +2,9 @@ function pindahSlide(curr, next) {
     document.getElementById('slide-' + curr).classList.replace('active', 'hidden');
     document.getElementById('slide-' + next).classList.replace('hidden', 'active');
     if (curr === 1) document.getElementById('bg-music').play();
+    if (next === 9) {
+        document.getElementById('bg-music').pause();
+    }
 }
 
 function cekSoal1() {
@@ -18,7 +21,6 @@ function cekSoal2() {
 
 function cekSoal3() {
     const val = document.getElementById('ans-3').value.toLowerCase().trim();
-    if (val === "mobile legend") pindahSlide(4, 5);
     if (val === "ml") pindahSlide(4, 5);
     else document.getElementById('err-3').classList.remove('hidden');
 }
