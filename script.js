@@ -18,7 +18,8 @@ function cekSoal2() {
 
 function cekSoal3() {
     const val = document.getElementById('ans-3').value.toLowerCase().trim();
-    if (val === "minecraft") pindahSlide(4, 5);
+    if (val === "mobile legend") pindahSlide(4, 5);
+    if (val === "ml") pindahSlide(4, 5);
     else document.getElementById('err-3').classList.remove('hidden');
 }
 
