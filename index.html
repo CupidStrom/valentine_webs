@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special buat Sayangkuhh Araaa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-heart-container" id="heart-bg"></div>
+
+    <div class="container slide active" id="slide-1">
+        <h1>Hai Sayang! 👋</h1>
+        <img src="gambar-intro.jpg" alt="Intro" class="slide-img">
+        <p>Ada sesuatu yang spesial nih, tapi jawab enih dulu ya...</p>
+        <button onclick="pindahSlide(1, 2)">Mulai Quest!</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-2">
+        <h2>Quest #1</h2>
+        <p>Siapa nama orang yang pwaling lucu dan imuttt se semestakuuuuuuu?</p>
+        <input type="text" id="ans-1" placeholder="Ketik di sini..." class="input-quest">
+        <p id="err-1" class="error-msg hidden">Masa gatau sih? Coba lagi!</p>
+        <button onclick="cekSoal1()">Cek Jawaban</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-3">
+        <h2>Quest #2</h2>
+        <p>Udah berapa lama ya kita saling kenal?</p>
+        <div class="options">
+            <label><input type="radio" name="soal2" value="salah"> 3 Bulan</label><br>
+            <label><input type="radio" name="soal2" value="benar"> Setengah Tahun</label><br>
+            <label><input type="radio" name="soal2" value="salah"> 1 Tahun</label>
+        </div>
+        <p id="err-2" class="error-msg hidden">Yah salah, coba lagi!</p>
+        <button onclick="cekSoal2()">Kirim Jawaban</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-4">
+        <h2>Quest #3</h2>
+        <p>Game apa yang sering aku mainin dan bikin km kesel mwhehehe?</p>
+        <input type="text" id="ans-3" placeholder="Jawabannya..." class="input-quest">
+        <p id="err-3" class="error-msg hidden">Salah seng singkat aja, ayo ingat-ingat!</p>
+        <button onclick="cekSoal3()">Cek</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-5">
+        <h2>Quest #4</h2>
+        <p>Siapa nama panjangkuu hayooooohhhhhhh?</p>
+        <div class="options">
+            <label><input type="radio" name="soal4" value="salah"> Akbar Gagah</label><br>
+            <label><input type="radio" name="soal4" value="benar"> Akbar Gagah Wicaksono</label><br>
+            <label><input type="radio" name="soal4" value="salah"> Akbarrrrrrrrrrrrrrrrrrrrrrrrrr</label>
+        </div>
+        <p id="err-4" class="error-msg hidden">Wah parah kalo salah ini!</p>
+        <button onclick="cekSoal4()">Kirim</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-6">
+        <h2>Quest Terakhir!</h2>
+        <p>Ketik "SAYANG" kalau kamu mau lanjut!</p>
+        <input type="text" id="ans-5" placeholder="..." class="input-quest">
+        <button onclick="cekSoal5()">Lanjut</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-7">
+        <h2>Ini Siapa Si lucuu banget ❤️</h2>
+        <img src="gambar-kita.jpg" alt="Foto Kita" class="slide-img foto-kita">
+        <p>Walaupun LDR, setiap momen sama kamu itu berharga banget.</p>
+        <button onclick="pindahSlide(7, 8)">Lanjut ke Pesan</button>
+    </div>
+
+    <div class="container slide hidden" id="slide-8">
+        <h2>Pesan Untukmu Sayangkuhh ❤️</h2>
+        <div class="kotak-surat">
+            <p>Haiiii sayanggggg, ga kerasa ya udh valentine mwehehehhe, ga berasa jga udh setengah tahunnn aku kenal kamuuu sekarang deymnn senenng banget akuuu. Happy valentine! First time aku dapet valentine dengan seseorang disamping ku dan ku rayakan mwhehehehe. Loveeeee uuu sayankkk!</p>
+        </div>
+        <button onclick="pindahSlide(8, 9)">lanjut</button>
+    </div>
+
+<div class="container slide hidden" id="slide-9">
+    <h1 id="pesan-utama">Untuk Araaaaaa ❤️</h1>
+    
+    <div id="kotak-pesan" class="hidden">
+        <p class="pesan-akhir">"Happy Valentine's Day, Sayang!"</p>
+        <video width="100%" controls style="border-radius: 15px; margin-top: 10px;">
+            <source src="video-buat-ara.mp4" type="video/mp4">
+            Browser kamu tidak mendukung tag video.
+        </video>
+    </div>
+
+    <button id="tombol-buka" onclick="bukaPesan()">Klik di sini, Seng</button>
+</div>
+
+    <audio id="bg-music" src="lagu-romantis.mp3" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
